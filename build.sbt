@@ -1,4 +1,4 @@
-name := "products"
+name := "GurulaCash"
 
 version := "1.0-SNAPSHOT"
 
