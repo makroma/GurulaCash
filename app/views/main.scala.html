@@ -1,0 +1,79 @@
+@(title: String)(content: Html)(implicit flash: Flash, lang: Lang)
+<!--Parameter list, flash scope, some localization-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+    </head>
+    <body>
+   		
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <!--Bootstrap navbar-->
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="">Gurulan Kassa - admin</a>
+				</div>
+
+				<div class="navbar-collapse collapse">
+					
+					<ul class="nav navbar-nav">
+						<li>
+	  						<a href="@routes.Users.list()">	
+	  							@Messages("application.users")
+							</a>
+						</li>
+					
+						<li>
+							<a href="@routes.Products.list()">
+							@Messages("products.list.navigation")
+							</a> 
+						</li>
+					
+						<!--<li>
+							<a href="@routes.Products.newProduct()">
+							<i class="icon-plus icon-black"></i>
+							@Messages("products.new.command")
+							</a>
+						</li>-->
+						
+					</ul>
+					<form class="navbar-form navbar-right" role="form">
+
+						<a class="btn btn-primary" role="button"href="@routes.Auth.logout" class="logout">logout</a>
+						
+					</form> 
+				</div>	
+			</div>
+		</div>
+		
+		
+		
+		<div class="container theme-showcase" role="main">
+	 		<div class="jumbotron"><!--Output page content block-->
+
+		 		<!--show success message-->
+
+		 		@if(flash.get("success").isDefined){
+					<div class="alert alert-success">
+						@flash.get("success")
+					</div> 
+				}
+
+				<!--show error message-->	
+					
+				@if(flash.get("error").isDefined){
+					<div class="alert alert-error">
+						@flash.get("error")
+					</div>
+				}
+
+		    	@content
+		    	<!-- @debug()  Call debug template && bring one template from another-->
+	  		</div>
+  		</div>
+	</body>
+</html>
+

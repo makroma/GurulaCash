@@ -1,0 +1,22 @@
+@(moneyForm: Form[Money])(implicit flash: Flash, lang: Lang)
+<!--Template parameter, List of products && language for localization-->
+@import helper._
+@import helper.twitterBootstrap._ 
+
+<!--page title and the HTML block are both passed as parameters to main-->
+	<div class="addValue">
+		<!--Loop over products parameter-->
+		<p>rairai</p>
+		@helper.form(action = routes.Logged.deposit()) {
+		<fieldset>
+			<legend>
+			</legend>
+
+			<!--Input elemets-->
+			@helper.inputText(moneyForm("Value"))
+
+
+		</fieldset>
+		<p><input type="submit" class="btn btn-primary" value='deposit'></p>
+	} 
+	</div>

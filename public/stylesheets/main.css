@@ -1,0 +1,118 @@
+#huge{
+	box-shadow: 0 0 100px rgba(0, 0, 0, 0.5) inset;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background-color: #8D8D8D;
+    height: 100vh;
+}
+
+.alert-info { 
+
+	border-color:transparent; 
+	background-color:#3A87AD;
+    color:white; 
+    font-weight:bold; 
+}
+.container .jumbotron{
+	margin-top: 60px;
+	height: 80vh;
+}
+
+footer { 
+	clear: both; 
+	text-align: right; 
+}
+
+.barcode { 
+	float:right; 
+	margin-bottom: 10px; 
+	border: 4px solid white; 
+}
+.login{
+	padding-top: 55px;
+}
+#loginbutton{
+	float: right;
+	width: 50%;
+}
+.header-left{
+	float: left;
+	width: 50%;
+	height: 100px;
+}
+
+.header-right{
+	float: right;
+	width: 50%;
+	height: 100px;
+}
+.navigation{
+	padding-top: 45px;
+}
+.message{
+	padding-top: 40px;
+}
+
+
+.users .name{
+	width: 50%;
+	float: left
+}
+.users .saldo{
+	width: 50%;
+	text-align: right;
+	float: right;
+}
+.moneyForm-left{
+	float: left;
+	width: 50%;
+}
+.moneyForm-right{
+	padding-left: 20px;
+	padding-top: 23px;
+	width: 50%;
+	float: right;
+}
+
+dl dd{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-style:italic
+}
+.box{
+	display: block;
+	background-color: Green;
+	height: 130px;
+	padding: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+	line-height: 90px;
+	color: white;
+
+	-webkit-transition:  background-color 0.3s, -webkit-transform 2s;
+    transition: background-color 0.3s, transform 2s;	
+}
+.box:hover{
+	background-color: Blue;
+	text-decoration: none;
+
+}
+
+span .boxlink{ 
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+
+  /* edit: added z-index */
+  z-index: 1;
+
+  /* edit: fixes overlap error in IE7/8, 
+     make sure you have an empty gif */
+  background-image: url('empty.gif');
+}
+.help-block{
+	visibility:hidden;
+} 
+

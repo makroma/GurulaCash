@@ -1,0 +1,13 @@
+@(products: List[Product])(implicit flash: Flash, lang: Lang)
+<!--Template parameter, List of products && language for localization-->
+
+	<dl class="products">
+		<p>Last months top-sells!</p>
+		<!--Loop over products parameter-->
+    	@for(i <- 1 to products.length) {
+
+       		<dt>@i. @products(i-1).name</dt>
+      		<dd>@products(i-1).description</dd>
+		}
+	</dl>
+	

@@ -1,0 +1,18 @@
+application.product = Tuotekatalogi
+
+ean = Viivakoodi
+name = Nimi
+description = Kuvaus:
+products.details = Tuote: {0}
+products.form = Tuote kuvaus
+products.new = (uusi)
+products.new.command = Uusi
+products.new.success = Tuote {0} lisätty onnistuneesti.
+validation.errors = Kiitos, korjaa virheet.
+validation.ean.duplicate = Järjestelmässä on jo tuote samalla ean koodilla.
+
+application.users = Käyttäjät
+
+users.id = ID
+users.name = Nimi
+users.saldo = Saldo

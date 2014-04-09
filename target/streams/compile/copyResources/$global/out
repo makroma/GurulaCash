@@ -1,0 +1,5 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/marko/git/GurulaCash /conf/application.conf,/Users/marko/git/GurulaCash /target/scala-2.10/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/marko/git/GurulaCash /conf/messages,/Users/marko/git/GurulaCash /target/scala-2.10/classes/messages)[0m
+[0m[[0mdebug[0m] [0m	(/Users/marko/git/GurulaCash /conf/messages.fi,/Users/marko/git/GurulaCash /target/scala-2.10/classes/messages.fi)[0m
+[0m[[0mdebug[0m] [0m	(/Users/marko/git/GurulaCash /conf/routes,/Users/marko/git/GurulaCash /target/scala-2.10/classes/routes)[0m

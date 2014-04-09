@@ -1,0 +1,33 @@
+@(user: User)(moneyForm: Form[Money])(implicit flash: Flash, lang: Lang)
+<!--Template parameter, List of products && language for localization-->
+
+@import helper._
+@import helper.twitterBootstrap._ 
+<!--page title and the HTML block are both passed as parameters to main-->
+<p>Deposit</p>
+<h4>Welcome @user.name! <h4>
+<h4>Your current balance is @user.balance.balance €.</h4><br>
+
+<!--page title and the HTML block are both passed as parameters to main-->
+<section>
+	<div class="addValue">
+		<!--Deposit-->
+		
+		@helper.form(action = routes.Logged.deposit()) {
+			<fieldset>
+				<legend>
+				</legend>
+
+				<!--Input elemets-->
+				<div class="moneyForm-left">
+					@helper.inputText(moneyForm("Deposit"))
+				</div>
+				<div class="moneyForm-right">
+				<input type="submit" class="btn btn-primary" value='deposit'>
+				</div>
+			</fieldset>
+			
+		} 
+	</div>
+</section>
+	

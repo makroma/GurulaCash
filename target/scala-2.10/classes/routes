@@ -1,0 +1,42 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index 
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+
+# Authentication
+GET    /login                      	controllers.Auth.authenticate
+GET    /logout                    	controllers.Auth.logout
+
+# Logged in page
+GET    	/shop		              	controllers.Logged.welcome
+GET    	/add		              	controllers.Logged.add
+POST 	/add						controllers.Logged.deposit
+GET		/home 						controllers.Logged.home
+GET 	/deposit					controllers.Logged.depositAction
+GET 	/market						controllers.Logged.market
+GET 	/buy/:pro					controllers.Logged.buy(pro: String)
+
+# Product list page
+GET 	/products 					controllers.Products.list
+
+# Users list page
+GET 	/users						controllers.Users.list
+
+# new products
+POST /products      				controllers.Products.save
+GET  /products/new  				controllers.Products.newProduct
+
+# Route with ean parameter
+GET /products/:ean 					controllers.Products.show(ean: Long)
+
+# route to generate barcode
+GET /barcode/:ean 					controllers.Barcodes.barcode(ean: Long)
+
+
+

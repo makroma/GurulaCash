@@ -1,0 +1,62 @@
+@(title: String)(user: Html, products: Html)(implicit flash: Flash)
+<!--Parameter list, flash scope, some localization-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+    </head>
+    <body>
+    <div id="huge">	
+		<div class="container" role="main">
+			<div class="jumbotron">
+		 		<!--Output page content block-->
+		 		<div class="header-left">
+					<h1>Gurulan Kassa</h1>
+				</div>
+				<div class="header-right">
+					<div class="navigation">
+						<a class="btn btn-info" role="button"href="@routes.Logged.welcome" class="home">Home</a>
+						<a class="btn btn-success" role="button"href="@routes.Logged.market" class="buy">Buy</a>
+						<a class="btn btn-warning" role="button"href="@routes.Logged.depositAction" class="deposit">Deposit</a>
+						<a class="btn btn-primary" role="button"href="@routes.Auth.logout" class="logout">logout</a>
+					</div>
+				</div>
+		 		<div class="container">
+		 		<!--show success message-->
+			 		<div class="col-md-8">
+			 		@user	
+			   		
+			   			<div class="message">
+				   			<!--show success message-->
+
+					 		@if(flash.get("success").isDefined){
+								<div class="alert alert-success">
+									@flash.get("success")
+								</div> 
+							}
+
+							<!--show error message-->	
+								
+							@if(flash.get("error").isDefined){
+								<div class="alert alert-error">
+									@flash.get("error")
+								</div>
+							}
+						</div>
+
+					</div>
+			   		<div class="col-md-4">
+					@products
+			   		</div>
+
+			    	<!-- @debug()  Call debug template && bring one template from another-->
+			    	</div>
+  				</div>
+  		</div>
+  	</div>	
+	</body>
+</html>
+

@@ -1,0 +1,23 @@
+@(products: List[Product])(implicit flash: Flash, lang: Lang)
+<!--Template parameter, List of products && language for localization-->
+
+
+<!--page title and the HTML block are both passed as parameters to main-->
+@main(Messages("application.product")) {
+
+	<dl class="products">
+		<!--Loop over products parameter-->
+
+    	@for(product <- products) {
+
+       		<dt>@product.name</dt>
+      		<dd>@product.description</dd>
+		}
+	</dl>
+	
+	<p> <!--Add button-->
+		<a href="@controllers.routes.Products.newProduct()" class="btn btn-primary btn-lg">
+			<i class="icon-plus icon-white"></i> @Messages("products.new.command") >
+		</a>
+	</p>
+}

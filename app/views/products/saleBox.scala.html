@@ -1,0 +1,18 @@
+@(products: List[Product])(implicit flash: Flash, lang: Lang)
+
+<!--Template parameter, List of products && language for localization-->
+
+	<div class="products">
+		<p>Click to buy!</p>
+		<!--Loop over products parameter-->
+    	@for(i <- 1 to products.length) {
+    		<div class="col-md-4">
+	    		<a href="/buy/:@(products(i-1).name)" >
+		    		<div class="box" style="background-color:@Logged.ranColor;">
+		    			<span class="boxlink"></span>
+		       		<p>@products(i-1).name</p>
+		      		</div>
+	      		</button>
+      		</div>
+		}
+	</div>

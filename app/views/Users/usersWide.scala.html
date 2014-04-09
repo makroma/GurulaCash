@@ -1,0 +1,16 @@
+@(users: List[User])(implicit flash: Flash, lang: Lang)
+<!--Template parameter, List of products && language for localization-->
+
+
+<!--page title and the HTML block are both passed as parameters to main-->
+
+	<div class="users">
+		<!--Loop over products parameter-->
+		<p>The welthiest gurus list</p>
+
+    	@for(user <- users) {
+
+       		<div class="name"><h4>@user.name</h4></div>
+      		<div class="saldo"><h4>@user.balance.balance €</h4></div>
+		}
+	</div>
